@@ -63,5 +63,9 @@ class HomeFragment : Fragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.main_menu, menu)
+        menu.findItem(R.id.shopping_cart).setOnMenuItemClickListener {
+            findNavController().navigate(R.id.login_dest)
+            true
+        }
     }
 }
